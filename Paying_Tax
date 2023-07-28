@@ -1,0 +1,20 @@
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) 
+	{
+		Scanner obj = new Scanner(System.in);
+		int n = obj.nextInt();
+		int arr[] = new int[n];
+		int tax=0;
+		for(int i=0;i<n;i++)
+		{
+		    arr[i]=obj.nextInt();
+		    if(arr[i]>1000)
+		    tax = tax + ((arr[i]-1000) * 10/100);
+		}
+		System.out.println(tax);
+	}
+}
+

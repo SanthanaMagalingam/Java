@@ -1,0 +1,56 @@
+import java.util.*;
+
+class Main
+{
+    public static void main(String args[])
+    {
+        Scanner obj = new Scanner(System.in);
+        String s = obj.next();
+        char arr[] = s.toCharArray();
+        int count=0;
+        for(int i=0;i<arr.length;i++)
+        {
+            if(arr[i]=='a' || arr[i]=='e' || arr[i]=='i' || arr[i]=='o' || arr[i]=='u')
+            {
+                count++;
+            }
+        }
+        char ch[] = new char[arr.length-count];
+        //System.out.println(ch.length);
+        
+        int z = ch.length-1;
+        for(int i=0;i<arr.length;i++)
+        {
+            if(arr[i]=='a' || arr[i]=='e' || arr[i]=='i' || arr[i]=='o' || arr[i]=='u')
+            {
+                continue;
+            }
+            else
+            {
+                ch[z] = arr[i];
+                z--;
+            }
+        }
+        for(int i=0;i<ch.length;i++)
+        {
+            System.out.println(ch[i]);
+        }
+        z=0;
+        for(int i=0;i<arr.length;i++)
+        {
+            if(arr[i]=='a' || arr[i]=='e' || arr[i]=='i' || arr[i]=='o' || arr[i]=='u')
+            {
+                continue;
+            }
+            else
+            {
+                arr[i]=ch[z];
+                z++;
+            }
+        }
+        for(int i=0;i<arr.length;i++)
+        {
+            System.out.print(arr[i]);
+        }  
+    }
+}

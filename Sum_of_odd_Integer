@@ -1,0 +1,24 @@
+import java.util.*;
+
+class Main
+{
+	public static void main(String[] args) 
+	{
+		Scanner obj = new Scanner(System.in);
+		int num=obj.nextInt();
+		int ans=0,rem=0;
+		while(num!=0)
+		{
+		    rem=num%10;
+		    if(rem%2!=0)
+		    {
+		        ans+=rem;
+		    }
+		    num=num/10;
+		}
+		System.out.println(ans);
+	}
+}
+
+//2514795 = 27
+// 5 + 1 + 7 + 9 + 5 = 27
